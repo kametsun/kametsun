@@ -5,10 +5,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { ColorModeScript, UIProvider, defaultConfig } from "@yamada-ui/react";
+import { theme } from "theme";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,7 +18,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <ColorModeScript initialColorMode={defaultConfig.initialColorMode} />
+        <UIProvider theme={theme}>{children}</UIProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
