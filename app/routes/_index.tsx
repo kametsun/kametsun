@@ -15,7 +15,7 @@ export default function Index() {
       <Header />
       <Heading>Welcome to</Heading>
       <Heading>KAMETSUN&apos;S PAGE</Heading>
-      <Heading>I&apos;m a Student</Heading>
+      <Heading>I&apos;m a Web Developer.</Heading>
     </Container>
   );
 }
